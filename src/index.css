@@ -81,6 +81,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #282c3f;
 }
 
 /* Main section */
@@ -374,5 +375,22 @@ a.action_container:link {
   right: 18px;
   width: 14px;
   height: 14px;
+  cursor: pointer;
+}
+
+
+.spinner{
+  margin-top: 100px;
+}
+
+
+.delete{
+  margin-top: 8px;
+  font-size: 18px;
+  width: 100%;
+ 
+  border: none;
+  padding: 5px 15px;
+  border-radius: 10px;
   cursor: pointer;
 }

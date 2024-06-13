@@ -1,18 +1,24 @@
 import { IoPerson } from "react-icons/io5";
 import { FaRegFaceKissWinkHeart } from "react-icons/fa6";
 import { IoBagAdd } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import {  useSelector } from "react-redux";
 
 const Header = () => {
+ 
+
+  const bag = useSelector((store) => store.bag);
+
   return (
     <header>
       <div className="logo_container">
-        <a href="#">
+        <Link to="/">
           <img
             className="myntra_home"
             src="../images/myntra_logo.webp"
             alt="Myntra Home"
           />
-        </a>
+        </Link>
       </div>
       <nav className="nav_bar">
         <a href="#">Men</a>
@@ -42,12 +48,12 @@ const Header = () => {
           <span className="action_name">Wishlist</span>
         </div>
 
-        <div className="action_container">
+        <Link className="action_container" to="/bag">
           <IoBagAdd />
 
           <span className="action_name">Bag</span>
-          <span className="bag-item-count">0</span>
-        </div>
+          <span className="bag-item-count baggy" >{bag.length}</span>
+        </Link>
       </div>
     </header>
   );
